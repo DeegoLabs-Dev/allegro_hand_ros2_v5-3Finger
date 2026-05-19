@@ -21,7 +21,7 @@ def generate_launch_description():
             output='screen',
             arguments=['-d', rviz_config_file],
             remappings=[
-                ('tf', PythonExpression(["'allegroHand_", LaunchConfiguration('NUM'), "/tf'"]))
+                (PythonExpression(["'allegroHand_", LaunchConfiguration('NUM'), "/tf'"]), '/tf'),
             ]
         )
     ])
